@@ -46,10 +46,10 @@ body{
     width: 100%;
     max-width: 450px;
     list-style: none;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 .todoList li{
     cursor: pointer;
@@ -58,4 +58,29 @@ body{
     padding: 6px 12px;
     background-color: #ffffff;
     margin-block-end: 12px;
+    display: flex;
+    justify-content: space-between;
+    transition:background-color 0.5s;
+}
+.todoList li:hover{
+    background-color: #cbcaca;
+}
+.todoList li p{
+    flex-grow: 1;
+    padding: 2px;
+}
+.btn{
+    border: none;
+    outline: none;
+    background-color: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px;
+}
+.deleteBtn{
+    color: red;
+}
+.editBtn{
+    color: #008000;
 }
