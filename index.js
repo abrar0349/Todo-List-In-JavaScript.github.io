@@ -44,14 +44,15 @@ function addTodo(){
 
     inputBox.value = "";
 }
+
 addBtn.addEventListener('click',addTodo)
 
 // Delete todo list data
 function deleteTodo(e){
-
+// console.log('ul is running')
 if(e.target.innerHTML == "Remove"){
-    console.log("Remove button is click")
-    todoList.removeChild(e.target.parentElement)
+    console.log("Remove button is click",e.target.parentElement)
+    // todoList.removeChild(e.target.parentElement)
     deleteDataFromLocalStorage(e)
 }
 
@@ -80,7 +81,7 @@ const saveLocalStorage = (todo) => {
     }
     todos.push(todo)
     localStorage.setItem('todos',JSON.stringify(todos))  // In there when I use undefine value then it's give me error on line no 79 and 43
-    console.log(todos)
+    // console.log(todos)
    
 }
 
@@ -123,7 +124,7 @@ const deleteDataFromLocalStorage = (todo) => {
     }else{
         todos = JSON.parse(localStorage.getItem('todos'))
     }
-    console.log()
+    // console.log()
     let todoText = todo.target.parentNode.querySelector('p').innerHTML; // I face issue -1 becuase I didn't give .innerHtml
     let findIndex = todos.indexOf(todoText)
     todos.splice(findIndex , 1)
