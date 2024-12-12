@@ -50,14 +50,15 @@ addBtn.addEventListener('click',addTodo)
 // Delete todo list data
 function deleteTodo(e){
 // console.log('ul is running')
+// console.log(e.target.innerHTML)
 if(e.target.innerHTML == "Remove"){
     console.log("Remove button is click",e.target.parentElement)
-    // todoList.removeChild(e.target.parentElement)
+    todoList.removeChild(e.target.parentElement)
     deleteDataFromLocalStorage(e)
 }
 
 if(e.target.innerHTML == "Edit"){
-    console.log("Edit button")
+    // console.log("Edit button")
     let target = e.target.parentNode
     // console.log(target)
     let p = target.querySelector('p')
